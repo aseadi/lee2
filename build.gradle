@@ -1,0 +1,17 @@
+plugins {
+    id 'java'
+}
+
+repositories {
+    jcenter();
+}
+
+dependencies {
+    implementation 'org.mariadb.jdbc:mariadb-java-client:+'
+    implementation 'junit:junit:+'
+}
+
+task runArticleMain(type: JavaExec) {
+	main = 'org.lee2.jdbc.raw.ArticleMain'
+	classpath =  sourceSets.main.runtimeClasspath
+}
